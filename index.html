@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    let moves = ['Rock', 'Paper', 'Scissors']; 
+    function computerPlay(){
+        return moves[Math.floor(Math.random() * Math.floor(3))]; 
+    }
+    console.log(computerPlay());
+  </script>
+</body>
+</html>
