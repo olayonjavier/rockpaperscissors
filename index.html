@@ -15,7 +15,7 @@
 
     function rockLogic(computerSelection){
         if(computerSelection === moves[0]){
-            return `Tie! ${moves[0]} ties with ${computerSelection}`;
+            return `You tied! ${moves[0]} ties with ${computerSelection}`;
         } else if(computerSelection === moves[1]){
             return `You lose! ${computerSelection} beats ${moves[0]}`;
         } else if (computerSelection === moves[2]){
@@ -25,21 +25,21 @@
 
     function paperLogic(computerSelection){
         if(computerSelection === moves[0]){
-            return `You Win! ${moves[1]} beats ${computerSelection}`;
+            return `You win! ${moves[1]} beats ${computerSelection}`;
         } else if (computerSelection === moves[1]){
-            return `Tie! ${moves[1]} ties with ${computerSelection}`;
+            return `You tied! ${moves[1]} ties with ${computerSelection}`;
         } else if(computerSelection === moves[2]){
-            return `You Lose! ${computerSelection} beats with ${moves[0]}`;
+            return `You lose! ${computerSelection} beats with ${moves[0]}`;
         }
     }
 
     function scissorsLogic(computerSelection){
         if(computerSelection === moves[2]){
-            return `You Lose! ${computerSelection} beats with ${moves[0]}`;
+            return `You lose! ${computerSelection} beats with ${moves[0]}`;
         } else if (computerSelection === moves[1]){
-            return `You Win! ${moves[2]} beats ${computerSelection}`;
+            return `You win! ${moves[2]} beats ${computerSelection}`;
         } else if(computerSelection === moves[2]){
-            return `Tie! ${moves[2]} ties with ${computerSelection}`;
+            return `You tied! ${moves[2]} ties with ${computerSelection}`;
         }
     }
 
@@ -66,11 +66,12 @@
             console.log(`Computer got ${computerSelection}`);
             let result = playRound(playerSelection, computerSelection);
             console.log(result);
-            if(result.includes("Win")){
+            if(result.includes("win")){
+                console.log(`Recording a win`);
                 winCount++;
             }
         }
-        console.log(`You beat the computer ${winCount} times!`);
+        console.log(`You beat the computer ${winCount} time(s)!`);
     }
 
     function parsePrompt(input){
