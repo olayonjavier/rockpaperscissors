@@ -1,0 +1,11 @@
+html {
+    text-align: center;
+}
+
+#scoreboard {
+    display: inline-block;
+    justify-content: right;
+}
+#scoreboard .h2 {
+    display: flex;
+}
